@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,6 +14,13 @@ class PostController extends Controller
 
         return view('posts.index',[
             'posts' => $posts
+        ]);
+    }
+
+    public function show(Post $post){
+
+        return view('posts.show', [
+            'post'=> $post,
         ]);
     }
 

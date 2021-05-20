@@ -8,6 +8,12 @@ class DashboardController extends Controller
 {
     public function index(){
 
-        return view('dashboard');
+        $posts = auth()->user()->posts()->with(['user','likes'])->paginate(20);
+        $user = auth()->user();
+
+        return view('dashboard',[
+            'user'=> $user,
+            'posts'=> $posts
+        ]);
     }
 }
