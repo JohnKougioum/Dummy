@@ -24,3 +24,5 @@ After you configure your database run the command:<br><br>
 <br><br>
 And lastly:<br><br>
 `php artisan serve`
+<br><br>
+## Screenshots of the app: [here](https://github.com/JohnKougioum/Dummy/tree/main/screenshots)
